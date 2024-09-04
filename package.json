@@ -1,0 +1,33 @@
+{
+  "name": "malosi",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules pnpm-lock.yaml .svelte-kit && pnpm update --latest && prisma generate"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.4.2",
+    "@auth/sveltekit": "^1.4.2",
+    "@prisma/client": "^5.19.1",
+    "@zxing/browser": "^0.1.5"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.2.4",
+    "@sveltejs/kit": "^2.5.25",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.5",
+    "prettier-plugin-svelte": "^3.2.6",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "prisma": "^5.19.1",
+    "svelte": "^4.2.19",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.2"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  }
+}
