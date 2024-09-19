@@ -8,7 +8,10 @@
 
 <nav class="flex gap-4 p-4">
   <a href="/" class="gradient text-2xl font-semibold">Malosi</a>
-  <a href="/" class="text-2xl">About</a>
+
+  {#if data.session}
+    <a href="/add" class="text-2xl">Add</a>
+  {/if}
 
   <div class="ml-auto">
     {#if data.session}

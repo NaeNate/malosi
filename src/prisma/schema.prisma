@@ -28,14 +28,26 @@ model User {
 model Day {
   id Int @id @default(autoincrement())
 
-  calorie Int      @default(0)
-  protein Int      @default(0)
-  date    DateTime @default(now())
+  date  String
+  foods Food[]
 
   user   User   @relation(fields: [userId], references: [id])
   userId String
 
-  @@unique([userId, date])
+  @@unique([date, userId])
+}
+
+model Food {
+  id Int @id @default(autoincrement())
+
+  name String
+
+  servings Int
+  calorie  Int
+  protein  Int
+
+  day   Day @relation(fields: [dayId], references: [id])
+  dayId Int
 }
 
 model Account {
