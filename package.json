@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "postinstall": "prisma generate",
     "preview": "vite preview",
     "clean": "rm -rf node_modules pnpm-lock.yaml .svelte-kit && pnpm update --latest && prisma generate"
   },

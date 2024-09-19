@@ -9,3 +9,6 @@ A super simple calorie and protein tracking app.
 - ZXing
 - Prisma
 - Tailwind
+- Google OAuth
+- Neon DB
+- Netlify
